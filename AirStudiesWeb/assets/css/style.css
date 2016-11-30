@@ -1,0 +1,15 @@
+/* ----------- Personalised Style Air Studies ---------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body{background-color: rgba(242, 242, 242, 1);  }
+
+/* - header - */
+#header{padding:2em 0}
+/* - body - */
+.jumbotron{background-color: #FFF;min-height: 600px}
+/* - footer assign - */
+.a{font-family: 'Raleway', sans-serif;font-size: 1.4em;font-weight: 100;color: rgba(27, 117, 188, 10)}
+.s{font-family: 'Raleway', sans-serif;font-size: 1.05em;font-weight: 600;color: #eca227}
+
