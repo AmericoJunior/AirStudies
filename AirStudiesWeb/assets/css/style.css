@@ -3,20 +3,36 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-body{background-color: rgba(196, 215, 248, 0.2);  }
-
+body{background:url("../images/bgdot.png") repeat #F5F5F5;}
+.fl{float:left}
+.fr{float: right}
+.cl{clear: both}
 /* - header - */
-#header{padding:2em 0}
+#header{padding: 1.5em 0 2em 0}
+.log{
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 12px;
+    /*min-height: 80px;*/
+}
+.log form{
+    font-family: Raleway, sans-serif;
+}
+.log form input{
+    margin-right: 5px;
+}
+.esqsen{
+    display: block;
+    margin-top: 1em;
+}
+.form-control{border: 1px solid #e1e1e1;}
 /* - body - */
-.jumbotron{background-color: #FFF;min-height: 600px}
-/* - footer assign - */
-.a{font-family: 'Raleway', sans-serif;font-size: 1.4em;font-weight: 100;color: rgba(27, 117, 188, 10)}
-.s{font-family: 'Raleway', sans-serif;font-size: 1.05em;font-weight: 600;color: #eca227}
+.jumbotron{background-color: #FFF;min-height: 600px; box-shadow: 0px 0px 10px rgba(0,0,0,.1);}
 
 .func h1, h2, h3, h4, h5, h6 {font-family: Raleway, sans-serif; font-weight: 300; color:rgba(27, 117, 188, 10); }
 .func p{font-size: 1.3em}
-.header img{width: auto}
-.header a{font-family: Raleway, sans-serif; font-weight: 300; font-size: 1em; float: right}
+.header img{width: auto; margin-top: 5px}
+.header a{font-family: Raleway, sans-serif; font-weight: 300; font-size: 1.1em; float: right}
 .carousel-caption{font-family: Raleway, sans-serif;}
 .carousel-caption p{font-weight: 300}
 .sch ul.schlist{
@@ -36,3 +52,7 @@ body{background-color: rgba(196, 215, 248, 0.2);  }
     -webkit-filter: none;
     filter: none;
 }
+
+/* - footer assign - */
+.a{font-family: 'Raleway', sans-serif;font-size: 1.4em;font-weight: 100;color: rgba(27, 117, 188, 10)}
+.s{font-family: 'Raleway', sans-serif;font-size: 1.05em;font-weight: 600;color: #eca227}
