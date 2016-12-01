@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-body{background-color: rgba(242, 242, 242, 1);  }
+body{background-color: rgba(196, 215, 248, 0.2);  }
 
 /* - header - */
 #header{padding:2em 0}
@@ -13,3 +13,26 @@ body{background-color: rgba(242, 242, 242, 1);  }
 .a{font-family: 'Raleway', sans-serif;font-size: 1.4em;font-weight: 100;color: rgba(27, 117, 188, 10)}
 .s{font-family: 'Raleway', sans-serif;font-size: 1.05em;font-weight: 600;color: #eca227}
 
+.func h1, h2, h3, h4, h5, h6 {font-family: Raleway, sans-serif; font-weight: 300; color:rgba(27, 117, 188, 10); }
+.func p{font-size: 1.3em}
+.header img{width: auto}
+.header a{font-family: Raleway, sans-serif; font-weight: 300; font-size: 1em; float: right}
+.carousel-caption{font-family: Raleway, sans-serif;}
+.carousel-caption p{font-weight: 300}
+.sch ul.schlist{
+    list-style-type: none;
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    overflow: hidden;
+}
+.sch ul.schlist li{
+    padding-left: 50px;
+    display: inline;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+.sch ul.schlist li:hover{
+    -webkit-filter: none;
+    filter: none;
+}
