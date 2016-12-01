@@ -99,7 +99,7 @@ body {
 
 /* Adaptacion Jumbotron Carousel */
 
-.container .jumbotron, .container-fluid .jumbotron{padding-right: 30px; padding-left: 30px}
+.container .jumbotron, .container-fluid .jumbotron{padding-right: 30px; padding-left: 30px; padding-top: 30px}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
