@@ -4,9 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 body{background:url("../images/bgdot.png") repeat #F5F5F5;}
-.fl{float:left}
-.fr{float: right}
-.cl{clear: both}
+
 /* - header - */
 #header{padding: 1.5em 0 2em 0}
 .log{
