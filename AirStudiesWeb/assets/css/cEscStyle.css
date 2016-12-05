@@ -1,5 +1,6 @@
 @import url(style.css);
-
+@import url(bootstrap-select.min.css);
+@import url(bootstrap-tagsinput.css);
 #usr{
     /*font-family: Raleway, sans-serif;*/
     font-weight: 200;
@@ -39,3 +40,30 @@
     font-size: 0.9em;
     border-color: rgba(141, 141, 141, 0.20);
 }
+
+.upload-drop-zone {
+    height: 200px;
+    border-width: 2px;
+    margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+    color: #ccc;
+    border-style: dashed;
+    border-color: #ccc;
+    line-height: 200px;
+    text-align: center
+}
+.upload-drop-zone.drop {
+    color: #222;
+    border-color: #222;
+}
+/* - DADOS - */
+.dados{
+    min-height: 300px;
+}
+input[type=date].form-control{line-height: 22px}
+div.bootstrap-tagsinput{width: 100%}
+span.tag.label.label-info{padding: .6em .6em .4em;}
+.label-info{background-color: #337ab7}
