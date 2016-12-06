@@ -65,5 +65,23 @@
 }
 input[type=date].form-control{line-height: 22px}
 div.bootstrap-tagsinput{width: 100%}
-span.tag.label.label-info{padding: .6em .6em .4em;}
+span.tag.label.label-info{padding: .5em .6em .6em;}
 .label-info{background-color: #337ab7}
+input#status{
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+}
+.table>tbody>tr>td, .table>tbody>tr>td > p{
+    padding: 1px 8px;
+    vertical-align: middle;
+    margin: 0 0 5px;
+    color:rgba(27, 117, 188, 10);
+}
+.jumbotron .mytable > tr > td > p{
+    margin-bottom: 0!important;
+    font-size: 1em;
+    font-weight: 200;
+    margin-top: 10px
+}
+.table>thead>tr>th{color:rgba(27, 117, 188, 10);}
