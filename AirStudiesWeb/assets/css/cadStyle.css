@@ -85,3 +85,5 @@ input#status{
     margin-top: 10px
 }
 .table>thead>tr>th{color:rgba(27, 117, 188, 10);}
+.checkbox+.checkbox, .radio+.radio{margin-top: 10px;}
+div .last{margin-bottom: 2em}
