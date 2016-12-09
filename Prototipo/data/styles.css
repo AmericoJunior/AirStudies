@@ -18,6 +18,9 @@
 .image {
   color:#000000;
 }
+.primary_button {
+  color:#FFFFFF;
+}
 .heading_1 {
   font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';
   font-weight:700;
@@ -65,6 +68,8 @@
 }
 .paragraph {
   text-align:left;
+}
+.line {
 }
 .text_field {
   color:#000000;
