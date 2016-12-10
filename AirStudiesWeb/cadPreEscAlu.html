@@ -30,7 +30,7 @@
 
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="assets/css/usrStyle.css" rel="stylesheet">
+    <link href="assets/css/cadStyle.css" rel="stylesheet">
 
 </head>
 <!-- HEADER LOGO
@@ -93,9 +93,9 @@
 
     <section id="usr" class="col-lg-3">
         <p class="col-lg-9">
-        <span class="usrName">Usuária Gatinha Executiva</span>
+            <span class="usrName">Usuária Gatinha Executiva</span>
             <button type="button" onclick="window.location.href='index.html'" class="btn btn-default btn-xs pull-right">Logout</button>
-        <a href="#"><span class="glyphicon glyphicon-cog edit pull-left" aria-hidden="true" title="Editar"></span></a>
+            <a href="#"><span class="glyphicon glyphicon-cog edit pull-left" aria-hidden="true" title="Editar"></span></a>
         </p>
         <div class="col-lg-3"><img class="img-circle pull-right clearfix" src="assets/images/users/user.png" alt="user name" title="Usuária Gatinha Executiva"></div>
     </section>
@@ -108,7 +108,84 @@
 
 <div class="container">
 
-    <div class="jumbotron row"></div>
+    <div class="jumbotron row">
+        <h3 class="text-center">Cadastro de Regras de Preço da Escola para o Aluno</h3>
+        <hr>
+        <div class="col-lg-6">
+            <section class="card">
+                <h4 class="text-center">Por Distância</h4>
+                <article>
+                    <span>A cada</span>
+                    <input type="number" placeholder="Km"><br>
+                    <span>de distância entre a escola e homestay reduzir</span>
+                    <!--<span><input type="radio" class="cadEA radio-inline" name="inputDis" id="dis"><label for="disAbs">Absoluto</label><input type="number" placeholder="Valor"></span>-->
+
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Percentual</label></div>
+                    <div class="input-group col-lg-6">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">%</span>
+                    </div>
+                    <br>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Absoluto</label></div>
+                    <div class="input-group col-lg-6">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+
+                </article>
+            </section>
+        </div>
+
+        <div class="col-lg-6">
+            <section class="card">
+                <h4 class="text-center">Por Tempo</h4>
+                <article>
+                    <span>A cada</span>
+                    <input type="number" placeholder="Minutos"><br>
+                    <span>a serem gastos entre escola e homestay, reduzir</span>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Percentual</label></div>
+                    <div class="input-group col-lg-6">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">%</span>
+                    </div>
+                    <br>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Absoluto</label></div>
+                    <div class="input-group col-lg-6">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+
+                </article>
+            </section>
+        </div>
+
+        <div class="col-lg-6">
+            <section class="card">
+                <h4 class="text-center">Por Número de Conduções</h4>
+                <article>
+                    <span>A cada</span>
+                    <input type="number" placeholder="Conduções"><br>
+                    <span>condução a ser utilizada, reduzir</span>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Percentual</label></div>
+                    <div class="input-group col-lg-6">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">%</span>
+                    </div>
+                    <br>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Absoluto</label></div>
+                    <div class="input-group col-lg-6">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+
+                </article>
+            </section>
+        </div>
+
+    </div>
 
 
     <!-- FOOTER -->

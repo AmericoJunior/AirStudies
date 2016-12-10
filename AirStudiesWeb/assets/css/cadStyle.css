@@ -76,7 +76,10 @@ input#status{
     padding: 1px 8px;
     vertical-align: middle;
     margin: 0 0 5px;
-    color:rgba(27, 117, 188, 10);
+    color: rgb(77, 77, 77);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 0.83em;
 }
 .jumbotron .mytable > tr > td > p{
     margin-bottom: 0!important;
@@ -84,6 +87,40 @@ input#status{
     font-weight: 200;
     margin-top: 10px
 }
-.table>thead>tr>th{color:rgba(27, 117, 188, 10);}
+.table>thead>tr>th{color:rgba(27, 117, 188, 1);}
 .checkbox+.checkbox, .radio+.radio{margin-top: 10px;}
 div .last{margin-bottom: 2em}
+
+.card{
+    border:1px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0 0 20px 0;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    background-color: rgba(0,0,0, 0.03);
+    margin-bottom: 30px;
+}
+.card h4{
+    border-bottom: 1px solid #c7c7c7;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    background-color:#337ab7;
+    color:#FFF;
+}
+.card article{
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+.card article > span{
+    display: block;
+    margin: 20px 10px;
+}
+.cardT{
+    margin-top: 6px;
+}
+input#disAbs.cadEA.radio-inline, input#disPer.cadEA.radio-inline{
+    margin: 0px 10px;
+}
