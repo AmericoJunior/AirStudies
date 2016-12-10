@@ -116,23 +116,23 @@
                 <h4 class="text-center">Por Distância</h4>
                 <article>
                     <span>A cada</span>
-                    <input type="number" placeholder="Km"><br>
+                    <div class="input-group col-lg-4 col-lg-offset-4">
+                        <input type="number" class="form-control">
+                        <span class="input-group-addon">Km</span>
+                    </div><br>
                     <span>de distância entre a escola e homestay reduzir</span>
-                    <!--<span><input type="radio" class="cadEA radio-inline" name="inputDis" id="dis"><label for="disAbs">Absoluto</label><input type="number" placeholder="Valor"></span>-->
-
-                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Percentual</label></div>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="PerDis"><label for="PerDis">Percentual</label></div>
                     <div class="input-group col-lg-6">
                         <input type="text" class="form-control">
                         <span class="input-group-addon">%</span>
                     </div>
                     <br>
-                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Absoluto</label></div>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="AbsDis"><label for="AbsDis">Absoluto</label></div>
                     <div class="input-group col-lg-6">
                         <span class="input-group-addon">$</span>
                         <input type="text" class="form-control">
                         <span class="input-group-addon">.00</span>
                     </div>
-
                 </article>
             </section>
         </div>
@@ -142,21 +142,23 @@
                 <h4 class="text-center">Por Tempo</h4>
                 <article>
                     <span>A cada</span>
-                    <input type="number" placeholder="Minutos"><br>
+                    <div class="input-group col-lg-4 col-lg-offset-4">
+                        <input type="number" class="form-control">
+                        <span class="input-group-addon">Minutos</span>
+                    </div><br>
                     <span>a serem gastos entre escola e homestay, reduzir</span>
-                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Percentual</label></div>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputTem" id="PerTem"><label for="PerTem">Percentual</label></div>
                     <div class="input-group col-lg-6">
                         <input type="text" class="form-control">
                         <span class="input-group-addon">%</span>
                     </div>
                     <br>
-                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Absoluto</label></div>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputTem" id="AbsTem"><label for="AbsTem">Absoluto</label></div>
                     <div class="input-group col-lg-6">
                         <span class="input-group-addon">$</span>
                         <input type="text" class="form-control">
                         <span class="input-group-addon">.00</span>
                     </div>
-
                 </article>
             </section>
         </div>
@@ -166,25 +168,132 @@
                 <h4 class="text-center">Por Número de Conduções</h4>
                 <article>
                     <span>A cada</span>
-                    <input type="number" placeholder="Conduções"><br>
+                    <div class="input-group col-lg-4 col-lg-offset-4">
+                        <input type="number" class="form-control">
+                        <span class="input-group-addon">Condução</span>
+                    </div><br>
                     <span>condução a ser utilizada, reduzir</span>
-                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Percentual</label></div>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputCon" id="PerCon"><label for="PerCon">Percentual</label></div>
                     <div class="input-group col-lg-6">
                         <input type="text" class="form-control">
                         <span class="input-group-addon">%</span>
                     </div>
                     <br>
-                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputDis" id="disAbs"><label for="disAbs">Absoluto</label></div>
+                    <div class="col-lg-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputCon" id="AbsCon"><label for="AbsCon">Absoluto</label></div>
                     <div class="input-group col-lg-6">
                         <span class="input-group-addon">$</span>
                         <input type="text" class="form-control">
                         <span class="input-group-addon">.00</span>
                     </div>
-
                 </article>
             </section>
         </div>
 
+        <div class="col-lg-6">
+            <section class="card">
+                <h4 class="text-center">Valor base - valor cheio da tarifa</h4>
+                <article>
+                    <span>Tipo de Quarto</span>
+                    <div class=" col-lg-3">
+                    <label for="qTipoC">Compartilhado</label>
+                    <div class="input-group">
+                        <input id="qTipoC" type="number" class="form-control" placeholder="Valor">
+                    </div>
+                    </div>
+
+                    <div class=" col-lg-3">
+                    <label for="qTipoS">Single</label>
+                    <div class="input-group">
+                        <input id="qTipoS" type="number" class="form-control" placeholder="Valor">
+                    </div>
+                    </div>
+
+
+
+                    <div class=" col-lg-3">
+                    <label for="qTipoD">Double</label>
+                    <div class="input-group">
+                        <input id="qTipoD" type="number" class="form-control" placeholder="Valor">
+                    </div>
+                    </div>
+
+                    <div class=" col-lg-3">
+                    <label for="qTipoSu">Suite</label>
+                    <div class="input-group">
+                        <input id="qTipoSu" type="number" class="form-control" placeholder="Valor">
+                    </div>
+                    </div>
+                </article>
+
+
+                <article class="pos">
+                    <span>Modalidade</span>
+                    <div class=" col-lg-6">
+                        <label for="mTipoC">Casal</label>
+                        <div class="input-group">
+                            <input id="mTipoC" type="number" class="form-control" placeholder="Valor">
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-6">
+                        <label for="mTipoS">Single</label>
+                        <div class="input-group">
+                            <input id="mTipoS" type="number" class="form-control" placeholder="Valor">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pos">
+                    <span>Tipo de Hospedagem</span>
+                    <div class=" col-lg-3">
+                        <label for="hTipoA">Apartamento</label>
+                        <div class="input-group">
+                            <input id="hTipoA" type="number" class="form-control" placeholder="Valor">
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-3">
+                        <label for="hTipoC">Casa</label>
+                        <div class="input-group">
+                            <input id="hTipoC" type="number" class="form-control" placeholder="Valor">
+                        </div>
+                    </div>
+
+
+
+                    <div class=" col-lg-3">
+                        <label for="hTipoR">República</label>
+                        <div class="input-group">
+                            <input id="hTipoR" type="number" class="form-control" placeholder="Valor">
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-3">
+                        <label for="hTipoH">Hostel</label>
+                        <div class="input-group">
+                            <input id="hTipoH" type="number" class="form-control" placeholder="Valor">
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-6">
+                        <label for="hComR" class="dis">Com Refeição</label>
+                        <div class="input-group">
+                            <input id="hComR" type="number" class="form-control" placeholder="Valor">
+                        </div>
+                    </div>
+
+                    <div class=" col-lg-6">
+                        <label for="hComX" class="dis">Extras (energia, gás e internet)</label>
+                        <div class="input-group">
+                            <input id="hComX" type="number" class="form-control" placeholder="Valor">
+                        </div>
+                    </div>
+                
+                </article>
+
+            </section>
+        </div>
+        <button class="btn btn-success pull-right col-lg-2">Gravar</button>
     </div>
 
 

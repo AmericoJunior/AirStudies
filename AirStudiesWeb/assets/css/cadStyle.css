@@ -121,6 +121,14 @@ div .last{margin-bottom: 2em}
 .cardT{
     margin-top: 6px;
 }
-input#disAbs.cadEA.radio-inline, input#disPer.cadEA.radio-inline{
+input#PerDis.cadEA.radio-inline, input#AbsDis.cadEA.radio-inline,
+input#PerTem.cadEA.radio-inline, input#AbsTem.cadEA.radio-inline,
+input#PerCon.cadEA.radio-inline, input#AbsCon.cadEA.radio-inline {
     margin: 0px 10px;
 }
+section.card > article.pos{
+    position: relative;
+    margin-top:50px;
+}
+input#mTipoC.form-control, input#mTipoS.form-control, input#hComX.form-control, input#hComR.form-control {width: 18em}
+label.dis{margin-top: 20px;}
