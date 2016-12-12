@@ -23,9 +23,11 @@ body{background:url("../images/bgdot.png") repeat #F5F5F5; font-family: Raleway,
     display: block;
     margin-top: 1em;
 }
-.form-control{border: 1px solid #e1e1e1;}
+.form-control{border: 1px solid #ccc;}
+.r{border-radius: 4px!important}
 
 #header > div > img{cursor: pointer}
+.navbar-default{border: solid 1px #ccc}
 /* - body - */
 label{font-size: 1em; font-weight: 400; color:rgba(0, 0, 0, 0.7)}
 .jumbotron{background-color: #FFF;min-height: 600px; box-shadow: 0px 0px 10px rgba(0,0,0,.1);}
