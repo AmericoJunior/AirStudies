@@ -122,11 +122,11 @@
                 </div>
 
             <div class="form-group col-lg-2">
-                <label for="inputPais"  class="dis">Tipo de Critério</label>
-                <select id="inputPais" class="selectpicker show-tick" data-width="100%">
-                    <option>Texto</option>
-                    <option>Numérico</option>
-                    <option>Checkbox</option>
+                <label for="inputTipo"  class="dis">Tipo de Critério</label>
+                <select id="inputTipo" class="selectpicker show-tick" data-width="100%">
+                    <option id="desVal">Texto</option>
+                    <option id="enVal">Numérico</option>
+                    <option class="desVal">Checkbox</option>
                 </select>
             </div>
 
@@ -171,6 +171,18 @@
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#inputTipo').change(function(){
+            if ($('#enVal').val() != '')
+                $('#inputValMin').removeAttr('disabled');
+        });
+        $('#inputTipo').change(function(){
+            if ($('#enVal').val() != '')
+                $('#inputValMax').removeAttr('disabled');
+        });
+    });
 </script>
 </body>
 </html>
