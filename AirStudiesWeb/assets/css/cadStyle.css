@@ -134,4 +134,7 @@ section.card > article.pos{
     margin-top:50px;
 }
 input#mTipoC.form-control, input#mTipoS.form-control, input#hComX.form-control, input#hComR.form-control {width: 18em}
-label.dis{margin-top: 20px;}
+label.dis, div.dis{margin-top: 20px;}
+.tableCr>tbody>tr{
+    height: 2.5em;
+}

@@ -67,8 +67,8 @@
                             <li><a href="cadAdmUsr.html">Usuário</a></li>
                             <li><a href="cadEsc.html">Escola</a></li>
                             <li><a href="cadPreEscAlu.html">Regras de Preços</a></li>
-                            <li class="active"><a href="cadPrefB.html">Preferências Básicas</a></li>
-                            <li><a href="cadGruCrit.html">Grupos de Critérios</a></li>
+                            <li><a href="cadPrefB.html">Preferências Básicas</a></li>
+                            <li class="active"><a href="#">Grupos de Critérios</a></li>
                             <li><a href="#">Propriedades</a></li>
                             <li><a href="#">Alunos</a></li>
                             <li><a href="#">Contratos</a></li>
@@ -123,40 +123,142 @@
             </form>
         </div>
 
-    <h3 class="text-center">Cadastro de preferências básicas</h3>
-    <hr>
+        <h3 class="text-center">Cadastro de grupo de critérios</h3>
+        <hr>
         <form>
             <span class="col-md-12">
-            <a class="col-md-6 row" href="#" data-toggle="tooltip" title="Exemplo, as preferências poderão ser: Tipo de Comida, Animais na casa (pets), Origem da Família, Número de Refeições por Dia, Número de dias por semana para usar lavanderia, etc…"><h4>Cadastro de critérios de busca de propriedades por aluno.</h4></a>
+            <a class="col-md-10 row" href="#" data-toggle="tooltip" title="Cadastro que agrupa os critérios padrão para facilitar a associação com a propriedade"><h4>Agrupa os critérios padrão para facilitar a associação com a propriedade.</h4></a>
             </span>
-                <div class="form-group col-md-4">
-                    <label for="inputNomCri" class="dis">Nome do Critério</label>
-                    <input type="text" class="form-control" id="inputNomCri" placeholder="Nome do Critério">
-                </div>
-
-            <div class="form-group col-md-2">
-                <label for="inputTipo"  class="dis">Tipo de Critério</label>
-                <select id="inputTipo" class="selectpicker show-tick" data-width="100%">
-                    <option>Texto</option>
-                    <option id="enVal">Numérico</option>
-                    <option>Checkbox</option>
-                </select>
-            </div>
-
             <div class="form-group col-md-3">
-                <label for="inputValMin" class="dis">Valor Mínimo</label>
-                <input type="text" class="form-control" id="inputValMin" placeholder="Mínimo" disabled>
+                <label for="inputNomGru" class="dis">Nome do Grupo</label>
+                <input type="text" class="form-control" id="inputNomGru" placeholder="Nome do Grupo">
             </div>
 
-            <div class="form-group col-md-3">
-                <label for="inputValMax" class="dis">Valor Maximo</label>
-                <input type="text" class="form-control" id="inputValMax" placeholder="Maximo" disabled>
+            <div class="form-group col-md-9">
+                <label for="inputDescGru"  class="dis">Descrição do Grupo</label>
+                <input type="text" class="form-control" id="inputDescGru" placeholder="Descrição do Grupo">
             </div>
-            <div class="col-md-12">
-                <label for="descCri">Descritivo do Critério</label>
-                <textarea class="form-control" rows="12" id="descCri"></textarea>
-            </div>
+
         </form>
+
+        <div class="col-md-12">
+            <h4>Associar Critérios</h4>
+            <div class="table-responsive">
+
+
+                <table id="tableCrit" class="table table-bordred table-striped tableCr">
+
+                    <thead>
+                    <th><input type="checkbox" id="checkall" /></th>
+                    <th>Critério</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkthis" /></td>
+                        <td>Tipo de Comida</td>
+                        <td>texto</td>
+                        <td>Comida típica da região, com carnes.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkthis" /></td>
+                        <td>Temos Pets</td>
+                        <td>texto</td>
+                        <td>Temos animais em casa, são dois gatos e um cachorro.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkthis" /></td>
+                        <td>Nossa Origem</td>
+                        <td>texto</td>
+                        <td>Somos uma família tipicamente brasileira, um casal com dois filhos</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkthis" /></td>
+                        <td>Vegetarianos e Veganos</td>
+                        <td>Check box</td>
+                        <td>Aqui você pode aptar por comer refeições vegetarianas, veganas ou com proteína animal.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkthis" /></td>
+                        <td>Lavanderia por dia</td>
+                        <td>Numérico</td>
+                        <td>Você pode optar por quantos dias gostaria de usar a máquina de lavar por semana.</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+
+                <div class="clearfix"></div>
+                <ul class="pagination center-block">
+                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                </ul>
+                <button class="btn btn-success pull-right">Criar Grupo</button>
+            </div>
+
+        </div>
+
+        <div class="col-md-12 dis">
+            <h4>Grupos de Critérios</h4>
+            <div class="table-responsive">
+
+
+                <table id="tableGCrit" class="table table-bordred table-striped tableCr">
+
+                    <thead>
+                    <th><input type="checkbox" id="checkall2" /></th>
+                    <th>Grupo</th>
+                    <th>Descrição</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="check" /></td>
+                        <td>Grupo Apto Single</td>
+                        <td>Regras e benefícios específicos para este tipo de acomodação</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" /></td>
+                        <td>Grupo Apto Double</td>
+                        <td>Regras e benefícios específicos para este tipo de acomodação</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" /></td>
+                        <td>Grupo Quarto Single</td>
+                        <td>Regras e benefícios específicos para este tipo de acomodação</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" /></td>
+                        <td>Grupo Quarto Compartilhado</td>
+                        <td>Regras e benefícios específicos para este tipo de acomodação</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="check" /></td>
+                        <td>Grupo Quarto Suite</td>
+                        <td>Regras e benefícios específicos para este tipo de acomodação</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+
+                <div class="clearfix"></div>
+                <ul class="pagination pull-right">
+                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                </ul>
+            </div>
+
+        </div>
 
     </div>
     <!-- FOOTER -->
@@ -195,6 +297,14 @@
             if ($('#enVal').val() != '')
                 $('#inputValMax').removeAttr('disabled');
         });
+    });
+</script>
+<script type="text/javascript">
+    $("#checkall").click(function () {
+        $(".checkthis").prop('checked', $(this).prop('checked'));
+    });
+    $("#checkall2").click(function () {
+        $(".check").prop('checked', $(this).prop('checked'));
     });
 </script>
 </body>
