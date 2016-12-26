@@ -38,9 +38,9 @@
 <body>
 
 <header id="header" class="container">
-    <div class="col-lg-3" onclick="window.location.href='indexadm.html'"><img src="assets/images/logoAS.png" alt="Air Studies" title="Air Studies"></div>
+    <div class="col-md-3" onclick="window.location.href='indexadm.html'"><img src="assets/images/logoAS.png" alt="Air Studies" title="Air Studies"></div>
 
-    <nav class="navbar navbar-default col-lg-6">
+    <nav class="navbar navbar-default col-md-6">
         <div class="container-fluid row">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -63,12 +63,12 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li class="active"><a href="#">Usuário</a></li>
-                            <li><a href="cadEsc.html">Escola</a></li>
+                            <li><a href="cadAdmUsr.html">Usuário</a></li>
+                            <li><a href="#">Escola</a></li>
                             <li><a href="cadPreEscAlu.html">Regras de Preços</a></li>
                             <li><a href="cadPrefB.html">Preferências Básicas</a></li>
                             <li><a href="cadGruCrit.html">Grupos de Critérios</a></li>
-                            <li><a href="cadProp.html">Propriedades</a></li>
+                            <li class="active"><a href="cadProp.html">Propriedades</a></li>
                             <li><a href="#">Alunos</a></li>
                             <li><a href="#">Contratos</a></li>
                             <!--<li role="separator" class="divider"></li>-->
@@ -91,13 +91,13 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <section id="usr" class="col-lg-3">
-        <p class="col-lg-9">
+    <section id="usr" class="col-md-3">
+        <p class="col-md-9">
             <span class="usrName">Usuária Gatinha Executiva</span>
             <button type="button" onclick="window.location.href='index.html'" class="btn btn-default btn-xs pull-right">Logout</button>
             <a href="#"><span class="glyphicon glyphicon-cog edit pull-left" aria-hidden="true" title="Editar"></span></a>
         </p>
-        <div class="col-lg-3"><img class="img-circle pull-right clearfix" src="assets/images/users/user.png" alt="user name" title="Usuária Gatinha Executiva"></div>
+        <div class="col-md-3"><img class="img-circle pull-right clearfix" src="assets/images/users/user.png" alt="user name" title="Usuária Gatinha Executiva"></div>
     </section>
 </header><!-- /header -->
 
@@ -122,14 +122,14 @@
             </form>
         </div>
 
-        <h3 class="text-center">Cadastro de Usuário Adminsitrativo</h3>
+        <h3 class="text-center">Cadastro de Propriedades (Genérico)</h3>
         <hr>
         <!-- PHOTO SCHOOL
         =========================================== -->
-        <section class="foto col-lg-4">
+        <section class="foto col-md-4">
 
             <!-- Standar Form -->
-            <h4>Foto do Usuário</h4>
+            <h4>Fotos da Propriedade</h4>
             <hr>
             <h4><small>Selecione arquivo do seu computador</small></h4>
             <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
@@ -164,33 +164,36 @@
             </div>
         </section>
 
-        <section class="dados col-lg-8">
+        <section class="dados col-md-8">
             <article class="row">
                 <form>
-                    <h4 class="col-lg-12">Identificação</h4>
-                    <div class="form-group col-lg-3">
-                        <label for="inputNomeUser">Usuário</label>
-                        <input type="text" class="form-control" id="inputNomeUser" placeholder="Nome do Usuário">
+                    <!-- Identificação ==============================================================================-->
+                    <h4 class="col-md-12">Identificação</h4>
+                    <div class="form-group col-md-9">
+                        <label for="inputNomeEscola">Nome da Propriedade</label>
+                        <input type="text" class="form-control" id="inputNomeEscola" placeholder="Nome da Escola">
                     </div>
-                    <div class="form-group col-lg-5">
-                        <label for="inputUsrSobrenome">Sobrenome</label>
-                        <input type="text" class="form-control" id="inputUsrSobrenome" placeholder="Sobrenome">
+                    <div class="form-group col-md-3">
+                        <label for="inputTipoP">Tipo</label>
+                        <select id="inputTipoP" class="selectpicker show-tick" data-width="100%">
+                            <option>Casa</option>
+                            <option>Hostel</option>
+                            <option>Prédio</option>
+                            <option>Apartamento</option>
+                            <option>Quarto</option>
+                        </select>
                     </div>
-                    <div class="form-group col-lg-4">
-                        <label for="inputEmailUsr">E-mail</label>
-                        <input type="email" class="form-control" id="inputEmailUsr" placeholder="E-mail">
-                    </div>
-
-                    <h4 class="col-lg-12">Localização</h4>
-                    <div class="form-group col-lg-6">
+                    <!-- Localização ================================================================================-->
+                    <h4 class="col-md-12">Localização</h4>
+                    <div class="form-group col-md-6">
                         <label for="inputEndereco">Endereço</label>
                         <input type="text" class="form-control" id="inputEndereco" placeholder="Endereço: Rua, Av...">
                     </div>
-                    <div class="form-group col-lg-3">
+                    <div class="form-group col-md-3">
                         <label for="inputNumComplemento">Número e Comp.</label>
                         <input type="number" class="form-control" id="inputNumComplemento" placeholder="Número">
                     </div>
-                    <div class="form-group col-lg-3">
+                    <div class="form-group col-md-3">
                         <label for="inputPais">País</label>
                         <select id="inputPais" class="selectpicker show-tick" data-width="100%">
                             <option>Brasil</option>
@@ -202,86 +205,159 @@
                             <option>Canadá</option>
                         </select>
                     </div>
-                    <div class="form-group col-lg-3">
+                    <div class="form-group col-md-3">
                         <label for="inputCEP">CEP</label>
                         <input type="number" class="form-control" id="inputCEP" placeholder="CEP">
                     </div>
-                    <div class="form-group col-lg-3">
+                    <div class="form-group col-md-3">
                         <label for="inputBairro">Bairro</label>
                         <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
                     </div>
-                    <div class="form-group col-lg-3">
+                    <div class="form-group col-md-3">
                         <label for="inputCidade">Cidade</label>
                         <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
                     </div>
-                    <div class="form-group col-lg-3">
+                    <div class="form-group col-md-3">
                         <label for="inputEstado">Estado</label>
                         <input type="text" class="form-control" id="inputEstado" placeholder="Estado">
                     </div>
-
-                    <h4 class="col-lg-12">Contato</h4>
-                    <div class="form-group col-lg-4">
-                        <label for="inputTelUsr">Tel. Residencial</label>
-                        <input type="number" class="form-control" id="inputTelUsr" placeholder="Telefone Residencial">
+                    <!-- Contato ====================================================================================-->
+                    <h4 class="col-md-12">Contato</h4>
+                    <div class="form-group col-md-4">
+                        <label for="inputNomeContact">Nome do Contato Principal</label>
+                        <input type="text" class="form-control" id="inputNomeContact" placeholder="Nome do Contato">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="inputTelCel">Tel. Celular</label>
-                        <input type="number" class="form-control" id="inputTelCel" placeholder="Telefone Celular">
+                        <label for="inputTelContact">Telefone</label>
+                        <input type="number" class="form-control" id="inputTelContact" placeholder="Telefone">
                     </div>
-                    <div class="form-group col-lg-4">
-                        <label for="inputTelCom">Tel. Comercial</label>
-                        <input type="email" class="form-control" id="inputTelCom" placeholder="Telefone Comercial">
+                    <div class="form-group col-md-4">
+                        <label for="inputEmailConact">Email</label>
+                        <input type="email" class="form-control" id="inputEmailConact" placeholder="Email">
                     </div>
-
-
-                    <h4 class="form-group col-lg-12">Documento</h4>
-                    <div class="col-lg-12">
-                        <div class="col-lg-offset-3 col-lg-6">
-                        <label for="inputDoc">Passaporte</label>
-                        <input type="text" class="form-control" id="inputDoc" placeholder="Passaporte">
+                    <div class="form-group col-md-12">
+                        <label for="inputObs">Observações</label>
+                        <textarea class="form-control" rows="8" id="inputObs"></textarea>
+                    </div>
+                    <!-- Disponibilidade ============================================================================-->
+                    <a class="col-md-5" href="#" data-toggle="tooltip" title="Clique em 'ANO' para selecionar o ano inteiro, ou no mês para selecionar o mês todo, ou clique e arraste para selecionar um período."><h4>Disponibilidade por ano</h4></a>
+                    <div class="col-md-12">
+                        <div id="group_list"></div>
+                        <div class="overlay"></div>
+                    </div>
+                    <!-- Tipos de Quartos ===========================================================================-->
+                    <h4 class="col-md-12">Tipo de Quartos Disponíveis</h4>
+                    <div class="col-md-4 tq form-group">
+                        <input type="checkbox"> Suite <br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">Qtd.</span>
+                            <input type="text" class="form-control" placeholder="Quantidade" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-md-4 tq form-group">
+                        <input type="checkbox"> Quarto Single <br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2">Qtd.</span>
+                            <input type="text" class="form-control" placeholder="Quantidade" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                    <div class="col-md-4 tq form-group">
+                        <input type="checkbox"> Suite <br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon3">Qtd.</span>
+                            <input type="text" class="form-control" placeholder="Quantidade" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                    <div class="col-md-6 tq form-group">
+                        <input type="checkbox"> Quarto Compartilhado <br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon4">Qtd.</span>
+                            <input type="text" class="form-control" placeholder="Quantidade" aria-describedby="basic-addon4">
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon4a">Qtd. Hospedes</span>
+                            <input type="text" class="form-control" placeholder="Quantidade" aria-describedby="basic-addon4a">
+                        </div>
+                    </div>
+                    <!-- Facilidades Oferecidas =====================================================================-->
+                    <h4 class="col-md-12">Facilidades Oferecidas</h4>
+                    <div class="col-md-12 form-group fc">
+                    <input type="checkbox" class="first"> Internet
+                    <input type="checkbox"> Lavanderia
+                    <input type="checkbox"> Secadora de roupa
+                    <input type="checkbox"> Cozinha <br>
+                        <div class="col-md-5 row">
+                            <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="checkbox" aria-label="Refeições"> Refeições
+                        </span>
+                                <input type="text" class="form-control" aria-label="..." placeholder="Qtd. Refeições">
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+                    </div><br>
+                    <!-- Facilidades Transporte =====================================================================-->
+                    <h4 class="col-md-12">Facilidade de Transporte</h4>
+                    <div class="col-md-12 form-group fc">
+                        <input type="checkbox" class="first"> Metro
+                        <input type="checkbox"> Trem
+                        <input type="checkbox"> StreetCar
+                        <input type="checkbox"> VLT
+                    </div>
+                    <div class="form-group col-md-12">
+                        <div class="col-md-12 row">
+                            <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="checkbox" aria-label="Refeições"> Outros
+                        </span>
+                                <input type="text" class="form-control" aria-label="..." value="Ferryboat, Bike" data-role="tagsinput">
+                            </div><!-- /input-group -->
                         </div>
                     </div>
 
-                    <h4 class="form-group col-lg-12">Modo para recuperar senha</h4>
-                    <div class="col-lg-12">
 
-                            <div class="col-lg-4 radio">
-                                <label>
-                                    <input type="radio" name="optionsRecSenha" class="radio-inline" id="optionEmail" value="option1">
-                                    E-mail
-                                </label>
-                            </div>
-                            <div class="col-lg-4 radio">
-                                <label>
-                                    <input type="radio" name="optionsRecSenha" class="radio-inline" id="optionSMS" value="option2">
-                                    SMS
-                                </label>
-                            </div>
-                            <div class="col-lg-4 radio">
-                                <label>
-                                    <input type="radio" name="optionsRecSenha" id="optionAmbos" class="radio-inline" value="option3" checked>
-                                    Ambos
-                                </label>
-                            </div>
+                    <h4 class="form-group col-md-12">Outras características</h4>
 
+                    <div class="form-group col-md-6">
+                        <label for="inputOriFam">Origem da Família</label>
+                        <select id="inputOriFam" class="selectpicker show-tick" data-width="100%">
+                            <option>Família 01</option>
+                            <option>Família 02</option>
+                            <option>Família 03</option>
+                            <option>Família 04</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputIdiFam">Idioma Falado</label>
+                        <select id="inputIdiFam" class="selectpicker show-tick" data-width="100%">
+                            <option>Português</option>
+                            <option>Inglês</option>
+                            <option>Francês</option>
+                            <option>Bulgaro</option>
+                        </select>
                     </div>
 
-                    <h4 class="form-group col-lg-12">Identificação</h4>
-                    <div class="col-lg-12">
-                        <div class="col-lg-6">
-                            <label for="IdentUsr">Usuário</label>
-                            <input type="text" class="form-control" id="IdentUsr" placeholder="Usuário">
-                        </div>
-
-                        <div class="col-lg-6 last">
-                            <label for="IdentSenha">Senha</label>
-                            <input type="password" class="form-control" id="IdentSenha" placeholder="Senha">
-                        </div>
-                        <div class="col-lg-12">
-                            <button class="btn btn-success pull-right" id="cadUsr">Cadastrar</button>
-                        </div>
+                    <div class="col-md-12 form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon5">Animais na Casa</span>
+                        <input type="text" class="form-control" id="animais" aria-describedby="basic-addon5" value="Guaxinim, Peixe" data-role="tagsinput">
+                    </div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon6">Tipo de Comida Servida</span>
+                        <input type="text" class="form-control" id="comida" aria-describedby="basic-addon6" value="Comida Típica, Frutos do mar" data-role="tagsinput">
+                    </div>
+                    </div>
+                    <div class="col-md-12 form-group fc">
+                        <input type="checkbox" class="first"> Permite Fumar
+                        <input type="checkbox"> Permite Bebidas Alcoólicas
+                        <input type="checkbox"> Permite Casais
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-success pull-right" id="cadUsr">Cadastrar</button>
                     </div>
                 </form>
+
 
             </article>
 
@@ -310,6 +386,14 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/bootstrap-tagsinput-angular.min.js"></script>
+<script src="assets/js/bootstrap-tagsinput.min.js"></script>
+<script src="assets/js/propDisp.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 <script type="text/javascript">
     + function($) {
         'use strict';
@@ -350,6 +434,5 @@
 
     }(jQuery);
 </script>
-
 </body>
 </html>

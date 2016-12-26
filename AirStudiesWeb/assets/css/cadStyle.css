@@ -138,3 +138,90 @@ label.dis, div.dis{margin-top: 20px;}
 .tableCr>tbody>tr{
     height: 2.5em;
 }
+
+/* - - - - - Propriedades - - - - - - - - - */
+
+.group-card {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: #fff;
+}
+
+.node {
+    background: silver;
+    width: 30px;
+    height: 20px;
+    border: 5px solid #fff;
+    cursor: pointer;
+}
+
+.status-0 {
+    background: #ccc;
+}
+.status-1 {
+    background: #5cb85c;
+}
+.status-2 {
+    background: #f0ad4e;
+}
+
+.group-name {
+    min-width: 120px;
+    vertical-align: bottom;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.group-name:hover {
+    background-color: #69c;
+    color: #fff;
+}
+
+.header {
+    font-size: 12px;
+    padding: 6px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.header:hover {
+    background-color: #69c;
+    color: #fff;
+}
+
+.column-header {
+    -moz-transform: rotate(90.0deg);
+    -o-transform: rotate(90.0deg);
+    -webkit-transform: rotate(90.0deg);
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+}
+
+.selected {
+    background: #2b669a;
+    /*border-color: #000;*/
+}
+
+.tq{
+    /*border: 1px solid #c0e1e7;*/
+    border: 2px solid #fff;
+    background-color: #dfefef;
+    padding: 5px 15px 15px;
+}
+div.tq > input[type=checkbox], div.fc > input[type=checkbox]
+{
+    height: 13px;
+    padding: 20px;
+    margin: 10px;
+}
+div.fc > input[type=checkbox]{
+    margin-left: 30px;
+}
+div.fc > input[type=checkbox].first{
+    margin-left: 0px;
+}
+.input-group > .bootstrap-tagsinput{
+    border-radius: 0 4px 4px 0;
+}
