@@ -75,9 +75,9 @@ input#status{
     padding: 20px;
 }
 .table>tbody>tr>td, .table>tbody>tr>td > p{
-    padding: 1px 8px;
+    padding: 3px 8px;
     vertical-align: middle;
-    margin: 0 0 5px;
+    margin: 0 0 1px;
     color: rgb(77, 77, 77);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;

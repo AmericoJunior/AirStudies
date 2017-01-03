@@ -31,7 +31,6 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/css/cadStyle.css" rel="stylesheet">
-    <link href="assets/css/usrStyle.css" rel="stylesheet">
 
 </head>
 <!-- HEADER LOGO
@@ -66,8 +65,8 @@
                         <ul class="dropdown-menu">
                             <li><a href="cadAdmUsr.html">Usuário</a></li>
                             <li><a href="cadEsc.html">Escola</a></li>
-                            <li><a href="cadPreEscAlu.html">Regras de Preços</a></li>
-                            <li class="active"><a href="cadPrefB.html">Preferências Básicas</a></li>
+                            <li class="active"><a href="cadPreEscAlu.html">Regras de Preços</a></li>
+                            <li><a href="cadPrefB.html">Preferências Básicas</a></li>
                             <li><a href="cadGruCrit.html">Grupos de Critérios</a></li>
                             <li><a href="cadProp.html">Propriedades</a></li>
                             <li><a href="#">Alunos</a></li>
@@ -123,42 +122,148 @@
             </form>
         </div>
 
-    <h3 class="text-center">Cadastro de preferências básicas</h3>
-    <hr>
+        <h3 class="text-center">Cadastro de Contratos (Genérico)</h3>
+        <hr>
+
         <form>
-            <span class="col-md-12">
-            <a class="col-md-6 row" href="#" data-toggle="tooltip" title="Exemplo, as preferências poderão ser: Tipo de Comida, Animais na casa (pets), Origem da Família, Número de Refeições por Dia, Número de dias por semana para usar lavanderia, etc…"><h4>Cadastro de critérios de busca de propriedades por aluno.</h4></a>
-            </span>
-                <div class="form-group col-md-4">
-                    <label for="inputNomCri" class="dis">Nome do Critério</label>
-                    <input type="text" class="form-control" id="inputNomCri" placeholder="Nome do Critério">
-                </div>
 
-            <div class="form-group col-md-2">
-                <label for="inputTipo"  class="dis">Tipo de Critério</label>
-                <select id="inputTipo" class="selectpicker show-tick" data-width="100%">
-                    <option>Texto</option>
-                    <option id="enVal">Numérico</option>
-                    <option>Checkbox</option>
-                </select>
+            <div class="col-md-6">
+                <section class="card">
+                    <h4 class="text-center">Por Número de Conduções</h4>
+                    <article>
+                        <span>A cada</span>
+                        <div class="input-group col-md-4 col-md-offset-4">
+                            <input type="number" class="form-control">
+                            <span class="input-group-addon">Condução</span>
+                        </div><br>
+                        <span>condução a ser utilizada, reduzir</span>
+                        <div class="col-md-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputCon" id="PerCon"><label for="PerCon">Percentual</label></div>
+                        <div class="input-group col-md-6">
+                            <input type="text" class="form-control">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                        <br>
+                        <div class="col-md-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputCon" id="AbsCon"><label for="AbsCon">Absoluto</label></div>
+                        <div class="input-group col-md-6">
+                            <span class="input-group-addon">$</span>
+                            <input type="text" class="form-control">
+                            <span class="input-group-addon">.00</span>
+                        </div>
+                    </article>
+                </section>
             </div>
 
-            <div class="form-group col-md-3">
-                <label for="inputValMin" class="dis">Valor Mínimo</label>
-                <input type="text" class="form-control" id="inputValMin" placeholder="Mínimo" disabled>
-            </div>
+            <div class="col-md-6">
+                <section class="card">
+                    <h4 class="text-center">Valor por acomodação</h4>
+                    <article>
+                        <span>Tipo de Quarto</span>
+                        <div class=" col-md-3">
+                            <label for="qTipoC">Compartilhado</label>
+                            <div class="input-group">
+                                <input id="qTipoC" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
 
-            <div class="form-group col-md-3">
-                <label for="inputValMax" class="dis">Valor Maximo</label>
-                <input type="text" class="form-control" id="inputValMax" placeholder="Maximo" disabled>
+                        <div class=" col-md-3">
+                            <label for="qTipoS">Single</label>
+                            <div class="input-group">
+                                <input id="qTipoS" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+
+
+                        <div class=" col-md-3">
+                            <label for="qTipoD">Double</label>
+                            <div class="input-group">
+                                <input id="qTipoD" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+                        <div class=" col-md-3">
+                            <label for="qTipoSu">Suite</label>
+                            <div class="input-group">
+                                <input id="qTipoSu" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="pos">
+                        <span>Modalidade</span>
+                        <div class=" col-md-6">
+                            <label for="mTipoC">Casal</label>
+                            <div class="input-group">
+                                <input id="mTipoC" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+                        <div class=" col-md-6">
+                            <label for="mTipoS">Single</label>
+                            <div class="input-group">
+                                <input id="mTipoS" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="pos">
+                        <span>Tipo de Hospedagem</span>
+                        <div class=" col-md-3">
+                            <label for="hTipoA">Apartamento</label>
+                            <div class="input-group">
+                                <input id="hTipoA" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+                        <div class=" col-md-3">
+                            <label for="hTipoC">Casa</label>
+                            <div class="input-group">
+                                <input id="hTipoC" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+
+
+                        <div class=" col-md-3">
+                            <label for="hTipoR">República</label>
+                            <div class="input-group">
+                                <input id="hTipoR" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+                        <div class=" col-md-3">
+                            <label for="hTipoH">Hostel</label>
+                            <div class="input-group">
+                                <input id="hTipoH" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+                        <div class=" col-md-6">
+                            <label for="hComR" class="dis">Com Refeição</label>
+                            <div class="input-group">
+                                <input id="hComR" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+                        <div class=" col-md-6">
+                            <label for="hComX" class="dis">Extras (energia, gás e internet)</label>
+                            <div class="input-group">
+                                <input id="hComX" type="number" class="form-control r" placeholder="Valor">
+                            </div>
+                        </div>
+
+                    </article>
+
+                </section>
             </div>
             <div class="col-md-12">
-                <label for="descCri">Descritivo do Critério</label>
-                <textarea class="form-control" rows="12" id="descCri"></textarea>
+                <button class="btn btn-success pull-right col-md-2">Gravar</button>
             </div>
         </form>
-
     </div>
+
+
     <!-- FOOTER -->
     <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
@@ -179,23 +284,5 @@
 <script src="assets/js/vendor/holder.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#inputTipo').change(function(){
-            if ($('#enVal').val() != '')
-                $('#inputValMin').removeAttr('disabled');
-        });
-        $('#inputTipo').change(function(){
-            if ($('#enVal').val() != '')
-                $('#inputValMax').removeAttr('disabled');
-        });
-    });
-</script>
 </body>
 </html>
