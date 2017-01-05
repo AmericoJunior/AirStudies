@@ -138,7 +138,10 @@ label.dis, div.dis{margin-top: 20px;}
 .tableCr>tbody>tr{
     height: 2.5em;
 }
-
+p.green{
+    font-size: 18px;
+    color: #18aa09;
+}
 /* - - - - - Propriedades - - - - - - - - - */
 
 .group-card {

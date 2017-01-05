@@ -128,29 +128,40 @@
         <form>
 
             <div class="col-md-6">
-                <section class="card">
-                    <h4 class="text-center">Por Número de Conduções</h4>
-                    <article>
-                        <span>A cada</span>
-                        <div class="input-group col-md-4 col-md-offset-4">
-                            <input type="number" class="form-control">
-                            <span class="input-group-addon">Condução</span>
-                        </div><br>
-                        <span>condução a ser utilizada, reduzir</span>
-                        <div class="col-md-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputCon" id="PerCon"><label for="PerCon">Percentual</label></div>
-                        <div class="input-group col-md-6">
-                            <input type="text" class="form-control">
-                            <span class="input-group-addon">%</span>
-                        </div>
-                        <br>
-                        <div class="col-md-4 cardT"><input type="radio" class="cadEA radio-inline" name="inputCon" id="AbsCon"><label for="AbsCon">Absoluto</label></div>
-                        <div class="input-group col-md-6">
-                            <span class="input-group-addon">$</span>
-                            <input type="text" class="form-control">
-                            <span class="input-group-addon">.00</span>
-                        </div>
-                    </article>
-                </section>
+                <form>
+                    <h4 class="col-md-12">Contratos entre escolas e propriedades</h4>
+                    <div class="form-group col-md-12">
+                        <label for="inputEsc">Selecione Escola</label>
+                        <select id="inputEsc" class="selectpicker show-tick" data-width="100%">
+                            <option>Escola - 001</option>
+                            <option>Escola - 002</option>
+                            <option>Escola - 003</option>
+                            <option>Escola - 004</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputPAs">Propriedade Associada</label>
+                        <select id="inputPAs" class="selectpicker show-tick" data-width="100%">
+                            <option>Propriedade - 001</option>
+                            <option>Propriedade - 002</option>
+                            <option>Propriedade - 003</option>
+                            <option>Propriedade - 004</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="dataAs">Data de associação</label>
+                        <input class="form-control" type="date" id="dataAs" placeholder="Data de Associação">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="dataTAs" >Data de término</label>
+                        <input class="form-control" type="date" id="dataTAs" data-toggle="tooltip" data-placement="top" title="Apenas para Contratos com validade" placeholder="Data de Fim da Associação">
+                    </div>
+                    <div class="col-md-12">
+                        <p class="green">
+                            Preencha ao lado o valor pago para cada tipo de acomodação.
+                        </p>
+                    </div>
+                </form>
             </div>
 
             <div class="col-md-6">
@@ -284,5 +295,11 @@
 <script src="assets/js/vendor/holder.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </body>
 </html>
