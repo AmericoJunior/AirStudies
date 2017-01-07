@@ -64,6 +64,15 @@
 nav.navbar.navbar-default{
     background-color: #eef2f4;
 }
+.prel{
+    position: relative;
+    height: 59px;
+}
+.valign{
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+}
 /* - DADOS - */
 .dados{
     min-height: 300px;

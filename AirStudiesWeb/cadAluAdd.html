@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Air Studies</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/cadStyle.css" rel="stylesheet">
+
+</head>
+<!-- HEADER LOGO
+================================================== -->
+<body>
+
+<header id="header" class="container">
+    <div class="col-md-3" onclick="window.location.href='indexadm.html'"><img src="assets/images/logoAS.png" alt="Air Studies" title="Air Studies"></div>
+
+    <nav class="navbar navbar-default col-md-6">
+        <div class="container-fluid row">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Contas <span class="sr-only">(current)</span></a></li>-->
+                    <li><a href="#">Contas</a></li>
+                    <li><a href="#">Disponibilidade</a></li>
+                    <li><a href="#">Relatórios</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Usuário</a></li>
+                            <li><a href="cadEsc.html">Escola</a></li>
+                            <li><a href="cadPreEscAlu.html">Regras de Preços</a></li>
+                            <li><a href="cadPrefB.html">Preferências Básicas</a></li>
+                            <li><a href="cadGruCrit.html">Grupos de Critérios</a></li>
+                            <li><a href="cadProp.html">Propriedades</a></li>
+                            <li class="active"><a href="cadAlu.html">Alunos</a></li>
+                            <li><a href="cadCont.html">Contratos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar por...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-warning" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                    </div><!-- /input-group -->
+                </form>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <section id="usr" class="col-md-3">
+        <p class="col-md-9">
+            <span class="usrName">Usuária Gatinha Executiva</span>
+            <button type="button" onclick="window.location.href='index.html'" class="btn btn-default btn-xs pull-right">Logout</button>
+            <a href="#"><span class="glyphicon glyphicon-cog edit pull-left" aria-hidden="true" title="Editar"></span></a>
+        </p>
+        <div class="col-md-3"><img class="img-circle pull-right clearfix" src="assets/images/users/user.png" alt="user name" title="Usuária Gatinha Executiva"></div>
+    </section>
+</header><!-- /header -->
+
+
+
+<!-- CONTENT
+=================================================== -->
+
+<div class="container">
+
+    <div class="jumbotron row">
+
+        <div class="alert alert-info alert-dismissible fade in col-md-12" role="alert">
+            <form id="buscarapida" class="form-inline">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4>Busca rápida</h4>
+                <div class="col-md-12">
+                    <label for="brap" class="col-md-3 br">Buscar nome, critério ou termo.</label>
+                    <input name="brap" id="brap" type="text" class="form-control col-md-8" placeholder="Busca rápida">
+                    <p class="pull-right"> <button type="button" class="btn btn-success">Buscar</button> </p>
+                </div>
+            </form>
+        </div>
+
+        <h3 class="text-center">Cadastro de Alunos</h3>
+        <hr>
+        <!-- PHOTO SCHOOL
+        =========================================== -->
+        <section class="foto col-md-4">
+
+            <!-- Standar Form -->
+            <h4>Foto do Alunoo</h4>
+            <hr>
+            <h4><small>Selecione arquivo do seu computador</small></h4>
+            <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <input type="file" name="files[]" id="js-upload-files" multiple>
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-primary" style="margin-top: 1em" id="js-upload-submit">Carregar arquivo</button>
+                </div>
+            </form>
+
+            <!-- Drop Zone -->
+            <h4>Ou arraste e solte o arquivo abaixo</h4>
+            <div class="upload-drop-zone" id="drop-zone">
+                Apenas arraste e solte o arquivo aqui!
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                    <span class="sr-only">60% Complete</span>
+                </div>
+            </div>
+
+            <!-- Upload Finished -->
+            <div class="js-upload-finished">
+                <h3>Arquivo carregado</h3>
+                <div class="list-group hidden">
+                    <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+                    <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="dados col-md-8">
+            <article class="row">
+                <form>
+                    <h4 class="col-md-12">Identificação</h4>
+                    <div class="form-group col-md-3">
+                        <label for="inputNomeAluno">Nome do Aluno</label>
+                        <input type="text" class="form-control" id="inputNomeAluno" placeholder="Nome do Aluno">
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputAluSobrenome">Sobrenome</label>
+                        <input type="text" class="form-control" id="inputAluSobrenome" placeholder="Sobrenome">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputPassaporte">Passaporte</label>
+                        <input type="number" class="form-control" id="inputPassaporte" placeholder="Número do Passaporte">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">E-mail</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="E-mail do aluno">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputNasc">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="inputNasc" placeholder="Data de nascimento">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputTel">Telefone</label>
+                        <input type="tel" class="form-control" id="inputTel" placeholder="Telefone">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputIdioma"  class="">Idioma Nativo</label>
+                        <select id="inputIdioma" class="selectpicker show-tick" data-width="100%">
+                            <option>Português</option>
+                            <option>Inglês</option>
+                            <option>Francês</option>
+                            <option>Alemão</option>
+                            <option>Espanhol</option>
+                            <option>Japonês</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-9 prel">
+                        <div class="valign">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1"> Requer auxílio especial
+                        </label>
+                        </div>
+                        <div class="col-md-8 pull-right row">
+                            <label for="AuxEspecial">Indicar o auxílio especial</label>
+                        <input type="text" class="form-control" id="AuxEspecial" placeholder="Se sim, indicar o auxílio" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="aluObs">Observação</label>
+                        <textarea class="form-control" rows="6" id="aluObs"></textarea>
+                    </div>
+
+                    
+                    <h4 class="col-md-12">Responsável</h4>
+                    <div class="form-group col-md-2">
+                        <label for="inputNomeResp">Nome</label>
+                        <input type="text" class="form-control" id="inputNomeResp" placeholder="Nome do Responsável">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputResSobrenome">Sobrenome</label>
+                        <input type="text" class="form-control" id="inputResSobrenome" placeholder="Sobrenome">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="telResp">Telefone</label>
+                        <input type="tel" class="form-control" id="telResp" placeholder="Tel. Resposnável">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="emailResp">E-mail</label>
+                        <input type="tel" class="form-control" id="emailResp" placeholder="E-mail Resposnável">
+                    </div>
+
+
+                    <h4 class="col-md-12">Localização</h4>
+                    <div class="form-group col-md-6">
+                        <label for="inputEndereco">Endereço</label>
+                        <input type="text" class="form-control" id="inputEndereco" placeholder="Endereço: Rua, Av...">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputNumComplemento">Número e Comp.</label>
+                        <input type="number" class="form-control" id="inputNumComplemento" placeholder="Número">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputPais">País</label>
+                        <select id="inputPais" class="selectpicker show-tick" data-width="100%">
+                            <option>Brasil</option>
+                            <option>USA</option>
+                            <option>França</option>
+                            <option>Inglaterra</option>
+                            <option>Austria</option>
+                            <option>Portugal</option>
+                            <option>Canadá</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputCEP">CEP</label>
+                        <input type="number" class="form-control" id="inputCEP" placeholder="CEP">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputBairro">Bairro</label>
+                        <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputCidade">Cidade</label>
+                        <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputEstado">Estado</label>
+                        <input type="text" class="form-control" id="inputEstado" placeholder="Estado">
+                    </div>
+
+
+
+                        <div class="col-md-12">
+                            <button class="btn btn-success pull-right" id="cadUsr">Cadastrar</button>
+                        </div>
+
+                </form>
+
+            </article>
+
+        </section>
+
+
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 <span class="a">Air</span><span class="s">Studies</span> &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+        </p>
+    </footer>
+
+</div><!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="assets/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script type="text/javascript">
+    + function($) {
+        'use strict';
+
+        // UPLOAD CLASS DEFINITION
+        // ======================
+
+        var dropZone = document.getElementById('drop-zone');
+        var uploadForm = document.getElementById('js-upload-form');
+
+        var startUpload = function(files) {
+            console.log(files)
+        }
+
+        uploadForm.addEventListener('submit', function(e) {
+            var uploadFiles = document.getElementById('js-upload-files').files;
+            e.preventDefault()
+
+            startUpload(uploadFiles)
+        })
+
+        dropZone.ondrop = function(e) {
+            e.preventDefault();
+            this.className = 'upload-drop-zone';
+
+            startUpload(e.dataTransfer.files)
+        }
+
+        dropZone.ondragover = function() {
+            this.className = 'upload-drop-zone drop';
+            return false;
+        }
+
+        dropZone.ondragleave = function() {
+            this.className = 'upload-drop-zone';
+            return false;
+        }
+
+    }(jQuery);
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#inlineCheckbox1').change(function(){
+            if ($('#inlineCheckbox1').val() != '')
+                $('#AuxEspecial').removeAttr('disabled');
+        });
+    });
+</script>
+</body>
+</html>
