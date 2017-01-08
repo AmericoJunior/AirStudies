@@ -31,6 +31,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/css/cadStyle.css" rel="stylesheet">
+    <link href="assets/css/usrStyle.css" rel="stylesheet">
 
 </head>
 <!-- HEADER LOGO
@@ -64,7 +65,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="cadAdmUsr.html">Usuário</a></li>
-                            <li class="active"><a href="#">Escola</a></li>
+                            <li class="active"><a href="cadEsc.html">Escola</a></li>
                             <li><a href="cadPreEscAlu.html">Regras de Preços</a></li>
                             <li><a href="cadPrefB.html">Preferências Básicas</a></li>
                             <li><a href="cadGruCrit.html">Grupos de Critérios</a></li>
@@ -106,342 +107,235 @@
 
     <div class="jumbotron row">
 
-        <div class="alert alert-info alert-dismissible fade in col-md-12" role="alert">
-            <form id="buscarapida" class="form-inline">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4>Busca rápida</h4>
+        <h3 class="text-center">Cadastro de Escolas - Busca</h3>
+        <hr>
+        <form>
+
+            <div class="form-group col-md-3">
+                <label for="inputNomEsc" class="dis">Nome</label>
+                <input type="text" class="form-control" id="inputNomEsc" placeholder="Nome da Escola">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="inputNomCid" class="dis">Cidade</label>
+                <input type="text" class="form-control" id="inputNomCid" placeholder="Nome da Cidade">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="inputTipo"  class="dis">País</label>
+                <select id="inputTipo" class="selectpicker show-tick" data-width="100%">
+                    <option>Brasil</option>
+                    <option>EUA</option>
+                    <option>Canadá</option>
+                    <option>Alemanha</option>
+                    <option>Suiça</option>
+                    <option>Austria</option>
+
+                </select>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="inputIdio"  class="dis">Idioma</label>
+                <select id="inputIdio" class="selectpicker show-tick" data-width="100%">
+                    <option>Português</option>
+                    <option>Inglês</option>
+                    <option>Francês</option>
+                    <option>Alemão</option>
+                    <option>Espanhol</option>
+                    <option>Japonês</option>
+
+                </select>
+            </div>
+
+            <div class="form-group col-md-3 col-md-offset-9">
+                <button type="button" class="btn btn-primary" onclick="window.location.href='cadEscAdd.html'">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Nova Escola
+                </button>
+                <button type="button" class="btn btn-success pull-right">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                </button>
+
+                <!--<button class="btn btn-success pull-right">Buscar</button>-->
+            </div>
+
+        </form>
+
+
+        <div class="container">
+            <hr>
+            <div class="row">
+
+
                 <div class="col-md-12">
-                    <label for="brap" class="col-md-3 br">Buscar nome, critério ou termo.</label>
-                    <input name="brap" id="brap" type="text" class="form-control col-md-8" placeholder="Busca rápida">
-                    <p class="pull-right"> <button type="button" class="btn btn-success">Buscar</button> </p>
+                    <h4>Lista de escolass cadastrados</h4>
+                    <div class="table-responsive">
+
+
+                        <table id="mytable" class="table table-bordred table-striped">
+
+                            <thead>
+
+                            <th><input type="checkbox" id="checkall" /></th>
+                            <th>Escola</th>
+                            <th>Cidade</th>
+                            <th>País</th>
+                            <th>Idioma</th>
+
+                            <th class="text-center">Edit</th>
+                            <th class="text-center">Delete</th>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Escola Ensino Intercambio</td>
+                                <td>Rio de Janeiro</td>
+                                <td>Brasil</td>
+                                <td>Português</td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Escola Ensino Intercambio</td>
+                                <td>Rio de Janeiro</td>
+                                <td>Brasil</td>
+                                <td>Inglês</td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Escola Ensino Intercambio</td>
+                                <td>Florianópolis</td>
+                                <td>Brasil</td>
+                                <td>Francês</td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Escola Ensino Intercambio</td>
+                                <td>Presidente Prudente</td>
+                                <td>Brasil</td>
+                                <td>Alemão</td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Escola Ensino Intercambio</td>
+                                <td>Blumenau</td>
+                                <td>Brasil</td>
+                                <td>Espanhol</td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+
+
+
+
+                            </tbody>
+
+                        </table>
+
+                        <div class="clearfix"></div>
+                        <ul class="pagination pull-right">
+                            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                        </ul>
+
+                    </div>
+
                 </div>
-            </form>
+            </div>
         </div>
 
-    <h3 class="text-center">Cadastro de Escola</h3>
-        <hr>
-        <!-- PHOTO SCHOOL
-        =========================================== -->
-        <section class="foto col-md-4">
-
-                    <!-- Standar Form -->
-                    <h4>Logo da Escola</h4>
-            <hr>
-                    <h4><small>Selecione arquivo do seu computador</small></h4>
-                    <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
-                        <div class="form-inline">
-                            <div class="form-group">
-                                <input type="file" name="files[]" id="js-upload-files" multiple>
-                            </div>
-                            <button type="submit" class="btn btn-sm btn-primary" style="margin-top: 1em" id="js-upload-submit">Carregar arquivo</button>
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content col-md-12">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h4 class="modal-title custom_align" id="HeadingM">Editar detalhes da escola</h4>
+                    </div>
+                    <div class="modal-body col-md-12">
+                        <div class="form-group col-md-6">
+                            <input class="form-control " type="text" placeholder="Escola">
                         </div>
-                    </form>
-
-                    <!-- Drop Zone -->
-                    <h4>Ou arraste e solte o arquivo abaixo</h4>
-                    <div class="upload-drop-zone" id="drop-zone">
-                        Apenas arraste e solte o arquivo aqui!
-                    </div>
-
-                    <!-- Progress Bar -->
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                            <span class="sr-only">60% Complete</span>
+                        <div class="form-group col-md-6">
+                            <input class="form-control " type="text" placeholder="Cidade">
                         </div>
-                    </div>
 
-                    <!-- Upload Finished -->
-                    <div class="js-upload-finished">
-                        <h3>Arquivo carregado</h3>
-                        <div class="list-group hidden">
-                            <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
-                            <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+                        <div class="form-group col-md-6">
+                            <select id="inputPaisM" class="selectpicker show-tick" data-width="100%">
+                                <option>Brasil</option>
+                                <option>EUA</option>
+                                <option>Canadá</option>
+                                <option>Alemanha</option>
+                                <option>Suiça</option>
+                                <option>Austria</option>
+
+                            </select>
                         </div>
-                    </div>
-        </section>
+                        <div class="form-group col-md-6">
+                            <select id="inputIdioM" class="selectpicker show-tick" data-width="100%">
+                                <option>Português</option>
+                                <option>Inglês</option>
+                                <option>Francês</option>
+                                <option>Alemão</option>
+                                <option>Espanhol</option>
+                                <option>Japonês</option>
 
-        <section class="dados col-md-8">
-            <article class="row">
-                <form>
-                    <h4 class="col-md-12">Identificação</h4>
-                    <div class="form-group col-md-6">
-                        <label for="inputNomeEscola">Nome da Escola</label>
-                        <input type="text" class="form-control" id="inputNomeEscola" placeholder="Nome da Escola">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputRegistro">Número Registro</label>
-                        <input type="number" class="form-control" id="inputRegistro" placeholder="Número de Registro">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputDataRegistro">Data Registro</label>
-                        <input type="date" class="form-control" id="inputDataRegistro" placeholder="Data de Registro">
-                    </div>
-
-                    <h4 class="col-md-12">Localização</h4>
-                    <div class="form-group col-md-6">
-                        <label for="inputEndereco">Endereço</label>
-                        <input type="text" class="form-control" id="inputEndereco" placeholder="Endereço: Rua, Av...">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputNumComplemento">Número e Comp.</label>
-                        <input type="number" class="form-control" id="inputNumComplemento" placeholder="Número">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputPais">País</label>
-                        <select id="inputPais" class="selectpicker show-tick" data-width="100%">
-                            <option>Brasil</option>
-                            <option>USA</option>
-                            <option>França</option>
-                            <option>Inglaterra</option>
-                            <option>Austria</option>
-                            <option>Portugal</option>
-                            <option>Canadá</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputCEP">CEP</label>
-                        <input type="number" class="form-control" id="inputCEP" placeholder="CEP">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputBairro">Bairro</label>
-                        <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputCidade">Cidade</label>
-                        <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputEstado">Estado</label>
-                        <input type="text" class="form-control" id="inputEstado" placeholder="Estado">
-                    </div>
-                    <h4 class="col-md-12">Idiomas</h4>
-                    <div class="form-group col-md-3">
-                        <label for="inputIdioma">Idioma Padrão</label>
-                        <select id="inputIdioma" class="selectpicker show-tick" data-width="100%">
-                            <option>Português</option>
-                            <option>Inglês</option>
-                            <option>Frances</option>
-                            <option>Espanhol</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-9">
-                        <label for="inputIdiEnsinado">Idiomas Ensinados</label>
-
-                        <input id="inputIdiEnsinado" type="text" value="Português,Inglês,Francês" data-role="tagsinput"/>
-
-                    </div>
-
-                    <h4 class="col-md-12">Contato</h4>
-                    <div class="form-group col-md-4">
-                        <label for="inputTelContact">Telefone</label>
-                        <input type="number" class="form-control" id="inputTelContact" placeholder="Telefone">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputNomeContact">Nome do Contato Principal</label>
-                        <input type="text" class="form-control" id="inputNomeContact" placeholder="Data de Registro">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputEmailConact">Email</label>
-                        <input type="email" class="form-control" id="inputEmailConact" placeholder="Email">
-                    </div>
-
-                    <h4 class="form-group col-md-12">Períodos / Valores / Descontos</h4>
-                    <div class="col-md-6">
-                        <label for="periodoDesconto">Período de desconto no contrato da escola</label>
-                        <input type="text" class="form-control" id="periodoDesconto" placeholder="Período de Desconto">
-                    </div>
-                    <div class="form-group col-md-5">
-                        <label for="percentDesconto">Percentual de Desconto no contrato</label>
-                        <input type="text" class="form-control" id="percentDesconto" placeholder="Percentual de Desconto">
-                    </div>
-                    <div class="form-group col-md-1">
-                        <label>
-                            Ativo
-                            <input id="status" type="checkbox" checked="checked" value="">
-                        </label>
-                    </div>
-                    <div class="form-group col-md-8">
-                        <label for="inputRegrasPrecos">Regras de preço para tarifas cobradas dos alunos</label>
-                        <select id="inputRegrasPrecos" class="selectpicker show-tick" data-width="100%">
-                            <option>Regra 01</option>
-                            <option>Regra 02</option>
-                            <option>Regra 03</option>
-                            <option>Regra 04</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputPlanoCobra">Plano de cobrança</label>
-                        <select id="inputPlanoCobra" class="selectpicker show-tick" data-width="100%">
-                            <option>Plano 01</option>
-                            <option>Plano 02</option>
-                            <option>Plano 03</option>
-                            <option>Plano 04</option>
-                        </select>
-                    </div>
-                    <div class="col-md-12">
-                    <button class="btn btn-success pull-right" id="cadUsr">Cadastrar</button>
-                    </div>
-                </form>
-
-                <!-- TABLE ====================================== -->
-
-                <div class="container">
-                    <div class="row">
-
-
-                        <div class="col-md-12">
-                            <h4>Lista de usuários cadastrados</h4>
-                            <div class="table-responsive">
-
-
-                                <table id="mytable" class="table table-bordred table-striped">
-
-                                    <thead>
-
-                                    <th><input type="checkbox" id="checkall" /></th>
-                                    <th>Nome</th>
-                                    <th>Email</th>
-                                    <th>Telefone</th>
-                                    <th class="text-center">Edit</th>
-
-                                    <th class="text-center">Delete</th>
-                                    </thead>
-                                    <tbody>
-
-                                    <tr>
-                                        <td><input type="checkbox" class="checkthis" /></td>
-                                        <td>Usuária Gatinha Executiva</td>
-                                        <td>user01@escola01.edu</td>
-                                        <td>+923335586757</td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td><input type="checkbox" class="checkthis" /></td>
-                                        <td>Outra Gatinha Executiva</td>
-                                        <td>user02@escola01.edu</td>
-                                        <td>+923335586757</td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-                                    </tr>
-
-
-                                    <tr>
-                                        <td><input type="checkbox" class="checkthis" /></td>
-                                        <td>Sempre Gatinha Executiva</td>
-                                        <td>user03@escola01.edu</td>
-                                        <td>+923335586757</td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-                                    </tr>
-
-
-
-                                    <tr>
-                                        <td><input type="checkbox" class="checkthis" /></td>
-                                        <td>Linda Gatinha Executiva</td>
-                                        <td>user04@escola01.edu</td>
-                                        <td>+923335586757</td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-                                    </tr>
-
-
-                                    <tr>
-                                        <td><input type="checkbox" class="checkthis" /></td>
-                                        <td>Diliça de Gatinha Executiva</td>
-                                        <td>user05@escola01.edu</td>
-                                        <td>+923335586757</td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
-                                        <td class="text-center"><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
-                                    </tr>
-
-
-
-
-
-                                    </tbody>
-
-                                </table>
-
-                                <div class="clearfix"></div>
-                                <ul class="pagination pull-right">
-                                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                                </ul>
-
-                            </div>
-
+                            </select>
                         </div>
+
+                    </div>
+                    <div class="modal-footer col-md-12">
+                        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Atualizar</button>
                     </div>
                 </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
 
 
-                <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                                <h4 class="modal-title custom_align" id="Heading">Editar detalhes do usuário</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <input class="form-control " type="text" placeholder="Nome">
-                                </div>
-                                <div class="form-group">
 
-                                    <input class="form-control " type="email" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control " type="number" placeholder="Telefone">
-
-
-                                </div>
-                            </div>
-                            <div class="modal-footer ">
-                                <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Atualizar</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
+        <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h4 class="modal-title custom_align" id="Heading">Deletar Escola</h4>
                     </div>
-                    <!-- /.modal-dialog -->
-                </div>
+                    <div class="modal-body">
 
+                        <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Você está certo de que deseja deletar esta escola?</div>
 
-
-                <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                                <h4 class="modal-title custom_align" id="Heading">Deletar usuário</h4>
-                            </div>
-                            <div class="modal-body">
-
-                                <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Você está certo de que deseja deletar este usuário?</div>
-
-                            </div>
-                            <div class="modal-footer ">
-                                <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Sim</button>
-                                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Não</button>
-                            </div>
-                        </div>
-                        <!-- /.modal-content -->
                     </div>
-                    <!-- /.modal-dialog -->
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Sim</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Não</button>
+                    </div>
                 </div>
-
-                <!-- END TABLE ================================== -->
-            </article>
-
-        </section>
-
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
 
     </div>
     <!-- FOOTER -->
@@ -458,55 +352,17 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="assets/js/bootstrap.min.js"></script>
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 <script src="assets/js/vendor/holder.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
-<script src="assets/js/bootstrap-tagsinput-angular.min.js"></script>
-<script src="assets/js/bootstrap-tagsinput.min.js"></script>
 <script type="text/javascript">
-    + function($) {
-        'use strict';
-
-        // UPLOAD CLASS DEFINITION
-        // ======================
-
-        var dropZone = document.getElementById('drop-zone');
-        var uploadForm = document.getElementById('js-upload-form');
-
-        var startUpload = function(files) {
-            console.log(files)
-        }
-
-        uploadForm.addEventListener('submit', function(e) {
-            var uploadFiles = document.getElementById('js-upload-files').files;
-            e.preventDefault()
-
-            startUpload(uploadFiles)
-        })
-
-        dropZone.ondrop = function(e) {
-            e.preventDefault();
-            this.className = 'upload-drop-zone';
-
-            startUpload(e.dataTransfer.files)
-        }
-
-        dropZone.ondragover = function() {
-            this.className = 'upload-drop-zone drop';
-            return false;
-        }
-
-        dropZone.ondragleave = function() {
-            this.className = 'upload-drop-zone';
-            return false;
-        }
-
-    }(jQuery);
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 </script>
-
 </body>
 </html>
