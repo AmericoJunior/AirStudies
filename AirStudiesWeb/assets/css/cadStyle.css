@@ -73,6 +73,10 @@ nav.navbar.navbar-default{
     top: 70%;
     transform: translateY(-50%);
 }
+span.filter-option.pull-left{
+font-size: 0.8em;
+margin-top: 3px;
+}
 /* - DADOS - */
 .dados{
     min-height: 300px;
