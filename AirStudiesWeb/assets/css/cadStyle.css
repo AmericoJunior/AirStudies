@@ -77,6 +77,13 @@ span.filter-option.pull-left{
 font-size: 0.8em;
 margin-top: 3px;
 }
+button.cadusr{
+    margin: 0 5px 0 5px;
+}
+button.cadusr:nth-last-child(3){
+    margin: 0 0 0 5px;
+}
+
 /* - DADOS - */
 .dados{
     min-height: 300px;
