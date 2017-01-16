@@ -64,15 +64,16 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="cadAtrDin.html">Atributos Dinâmicos</a></li>
+                            <li class="active"><a href="cadAtrDin.html">Atributos Dinâmicos</a></li>
                             <li><a href="cadAdmUsr.html">Usuário</a></li>
                             <li><a href="cadEsc.html">Escola</a></li>
                             <li><a href="cadPreEscAlu.html">Regras de Preços</a></li>
-                            <li class="active"><a href="cadPrefB.html">Preferências Básicas</a></li>
+                            <li><a href="cadPrefB.html">Preferências Básicas</a></li>
                             <li><a href="cadGruCrit.html">Grupos de Critérios</a></li>
                             <li><a href="cadProp.html">Propriedades</a></li>
                             <li><a href="cadAlu.html">Alunos</a></li>
                             <li><a href="cadCont.html">Contratos</a></li>
+                            <!-- Lembre-se de adicionar a classe "active" na "li" da página que for gerada ========= -->
                         </ul>
                     </li>
                 </ul>
@@ -108,57 +109,11 @@
 
     <div class="jumbotron row">
 
-        <div class="alert alert-info alert-dismissible fade in col-md-12" role="alert">
-            <form id="buscarapida" class="form-inline">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4>Busca rápida</h4>
-                <div class="col-md-12">
-                    <label for="brap" class="col-md-3 br">Buscar nome, critério ou termo.</label>
-                    <input name="brap" id="brap" type="text" class="form-control col-md-8" placeholder="Busca rápida">
-                    <p class="pull-right"> <button type="button" class="btn btn-success">Buscar</button> </p>
-                </div>
-            </form>
-        </div>
+        <h3 class="text-center">Título da Página</h3>
+        <hr>
+        <!-- App Content Starts here =============================================================================== -->
 
-    <h3 class="text-center">Cadastro de preferências básicas</h3>
-    <hr>
-        <form>
-            <span class="col-md-12">
-            <a class="col-md-6 row" href="#" data-toggle="tooltip" title="Exemplo, as preferências poderão ser: Tipo de Comida, Animais na casa (pets), Origem da Família, Número de Refeições por Dia, Número de dias por semana para usar lavanderia, etc…"><h4>Cadastro de critérios de busca de propriedades por aluno.</h4></a>
-            </span>
-                <div class="form-group col-md-4">
-                    <label for="inputNomCri" class="dis">Nome do Critério</label>
-                    <input type="text" class="form-control" id="inputNomCri" placeholder="Nome do Critério">
-                </div>
 
-            <div class="form-group col-md-2">
-                <label for="inputTipo"  class="dis">Tipo de Critério</label>
-                <select id="inputTipo" class="selectpicker show-tick" data-width="100%">
-                    <option>Texto</option>
-                    <option id="enVal">Numérico</option>
-                    <option>Checkbox</option>
-                </select>
-            </div>
-
-            <div class="form-group col-md-3">
-                <label for="inputValMin" class="dis">Valor Mínimo</label>
-                <input type="text" class="form-control" id="inputValMin" placeholder="Mínimo" disabled>
-            </div>
-
-            <div class="form-group col-md-3">
-                <label for="inputValMax" class="dis">Valor Maximo</label>
-                <input type="text" class="form-control" id="inputValMax" placeholder="Maximo" disabled>
-            </div>
-            <div class="form-group col-md-12">
-                <label for="descCri">Descritivo do Critério</label>
-                <textarea class="form-control" rows="12" id="descCri"></textarea>
-            </div>
-            <div class="col-md-12">
-                <button class="btn btn-success pull-right cadusr" id="gravar">Gravar</button>
-                <button class="btn btn-success pull-right cadusr" id="gr_nv">Gravar e Criar Novo</button>
-                <button class="btn btn-primary pull-right cadusr" id="cancel">Cancelar</button>
-            </div>
-        </form>
 
     </div>
     <!-- FOOTER -->
@@ -182,22 +137,6 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="assets/js/bootstrap-select.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#inputTipo').change(function(){
-            if ($('#enVal').val() != '')
-                $('#inputValMin').removeAttr('disabled');
-        });
-        $('#inputTipo').change(function(){
-            if ($('#enVal').val() != '')
-                $('#inputValMax').removeAttr('disabled');
-        });
-    });
-</script>
+
 </body>
 </html>
