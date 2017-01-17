@@ -109,10 +109,106 @@
 
     <div class="jumbotron row">
 
-        <h3 class="text-center">Título da Página</h3>
+        <h3 class="text-center">Cadastro de Atributos Dinâmicos</h3>
         <hr>
         <!-- App Content Starts here =============================================================================== -->
 
+        <form>
+            <div class="form-group col-md-6">
+                <label for="inputNomAtr">Nome do Atributo</label>
+                <input type="text" class="form-control" id="inputNomAtr" placeholder="Nome do Atributo">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputNomAmig">Nome Amigável</label>
+                <input type="text" class="form-control" id="inputNomAmig" placeholder="Nome Amigável">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="slctTipo">Tipo</label>
+                <select id="slctTipo" class="selectpicker show-tick" data-width="100%">
+                    <option>Texto</option>
+                    <option>Numérico</option>
+                    <option>Data</option>
+                    <option>Lógico</option>
+                </select>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="descCri">Descrição</label>
+                <textarea class="form-control" rows="6" id="descCri"></textarea>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputTamMax">Tamanho Máximo</label>
+                <input type="number" class="form-control" id="inputTamMax" placeholder="Tamanho Máximo">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputTamMin">Tamanho Mínimo</label>
+                <input type="number" class="form-control" id="inputTamMin" placeholder="Tamanho Mínimo">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputValMax">Valor Máximo</label>
+                <input type="number" class="form-control" id="inputValMax" placeholder="Valor Máximo">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputValMin">Valor Mínimo</label>
+                <input type="number" class="form-control" id="inputValMin" placeholder="Valor Mínimo">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="slctTipoEnt">Tipo de Entidade</label>
+                <select id="slctTipoEnt" class="selectpicker show-tick" data-width="100%">
+                    <option>Escola</option>
+                    <option>Aluno</option>
+                    <option>Homestay</option>
+                    <option>Usuário</option>
+                    <option>Contrato</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="slctPaisAp">País Aplicável</label>
+                <select id="slctPaisAp" class="selectpicker show-tick" data-width="100%">
+                    <option>Brasil</option>
+                    <option>Holanda</option>
+                    <option>USA</option>
+                    <option>França</option>
+                    <option>Portugal</option>
+                    <option>Espanha</option>
+                    <option>Suécia</option>
+
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="slctCidAp">Cidade Aplicável</label>
+                <select id="slctCidAp" class="selectpicker show-tick" data-width="100%">
+                    <option>Rio de Janeiro</option>
+                    <option>Rotterdam</option>
+                    <option>Los Angeles</option>
+                    <option>Bordeaux</option>
+                    <option>Coimbra</option>
+                    <option>Valencia</option>
+                    <option>Gothenburg</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="slctOrAp">Ordem de Aparecimento</label>
+                <select id="slctOrAp" class="selectpicker show-tick" data-width="100%">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2 col-lg-offset-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="">
+                        Obrigatório
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button class="btn btn-success pull-right cadusr" id="gravar">Gravar</button>
+                <button class="btn btn-success pull-right cadusr" id="gr_nv">Gravar e Criar Novo</button>
+                <button class="btn btn-primary pull-right cadusr" id="cancel">Cancelar</button>
+            </div>
+        </form>
 
 
     </div>
