@@ -29,7 +29,10 @@ body{background:url("../images/bgdot.png") repeat #F5F5F5; font-family: Raleway,
 #header > div > img{cursor: pointer}
 .navbar-default{border: solid 1px #ccc}
 /* - body - */
-
+div.hr{
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 10px;
+}
 #brap{
     width: 50%;
     margin-bottom: 1em;
