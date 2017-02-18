@@ -155,7 +155,7 @@
                 <h4>Previsão de Recebimento</h4>
                 <h5>Período por mês</h5>
 
-                <input id="ex16b" type="text" class="col-md-12"/><br/>
+                <input id="pRecebA" type="text" class="col-md-12"/><br/>
 
                 <div class="radio">
                     <label class="radio-inline">
@@ -207,8 +207,8 @@
         <form>
             <div class="form-group">
                 <h4><span>Recebimentos Pendentes</span></h4>
-                <input id="ex6" type="text" data-slider-min="1" data-slider-max="60" data-slider-step="1" data-slider-value="30"/>
-                <span id="recebPendentesLabel">A mais de: <span id="ex6SliderVal">30</span><span> dias</span></span>
+                <input id="rPend" type="text" data-slider-min="1" data-slider-max="60" data-slider-step="1" data-slider-value="30"/>
+                <span id="recebPendentesLabel">A mais de: <span id="rPendSliderVal">30</span><span> dias</span></span>
             </div>
 
             <div class="form-group">
@@ -272,12 +272,12 @@
 <script src="assets/js/bootstrap-select.min.js"></script>
 <script src="assets/js/bootstrap-slider.min.js"></script>
 <script type="text/javascript">
-    $("#ex16a").slider({ min: 1, max: 12, value: 1, focus: true });
-    $("#ex16b").slider({ min: 1, max: 12, value: [1, 12], focus: true });
+    $("#pRecebB").slider({ min: 1, max: 12, value: 1, focus: true });
+    $("#pRecebA").slider({ min: 1, max: 12, value: [3, 5], focus: true });
 
-    $("#ex6").slider();
-    $("#ex6").on("slide", function(slideEvt) {
-        $("#ex6SliderVal").text(slideEvt.value);
+    $("#rPend").slider();
+    $("#rPend").on("slide", function(slideEvt) {
+        $("#rPendSliderVal").text(slideEvt.value);
     });
 
 </script>
