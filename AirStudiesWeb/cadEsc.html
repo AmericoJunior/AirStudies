@@ -365,5 +365,10 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
+<script type="text/javascript">
+    $("#checkall").click(function () {
+        $(".checkthis").prop('checked', $(this).prop('checked'));
+    });
+</script>
 </body>
 </html>
